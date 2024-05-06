@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Leaflet preview</title>
+		<title>GTE tiles test</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
@@ -31,13 +31,13 @@
 	<body>
 		<div id="map"></div>
 		<script>
-			var map = L.map("map", { attributionControl: false }).setView([44.9916, -18.926], 6);
+			var map = L.map("map", { attributionControl: false }).setView([42.416, 11.647], 7);
 			L.control.attribution({ prefix: false }).addTo(map);
-			var tilesource_layer = L.tileLayer("tiles/{z}/{x}/{y}.png", {
-				minZoom: 5,
-				maxZoom: 9,
+			var tilesource_layer = L.tileLayer("tiles/{z}/{x}/{y}.jpg", {
+				minZoom: 4,
+				maxZoom: 10,
 				tms: false,
-				attribution: "Created by QGIS",
+				attribution: "Credit: various sources",
 			}).addTo(map);
 		</script>
 	</body>
