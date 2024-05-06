@@ -31,11 +31,13 @@
 	<body>
 		<div id="map"></div>
 		<script>
-			var map = L.map("map", { attributionControl: false }).setView([42.416, 11.647], 7);
+			var map = L.map("map", { attributionControl: false }).setView([42.416, 11.647], 6);
 			L.control.attribution({ prefix: false }).addTo(map);
 			var tilesource_layer = L.tileLayer("tiles/{z}/{x}/{y}.jpg", {
-				minZoom: 4,
-				maxZoom: 10,
+				tileSize: 256,
+				detectRetina:true,
+				minZoom: 5,
+				maxZoom: 9,
 				tms: false,
 				attribution: "Credit: various sources",
 			}).addTo(map);
